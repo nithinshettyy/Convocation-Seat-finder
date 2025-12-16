@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Convocation Seat Finder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg,#7b59c3,#3f1e87,#230661,#200246);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 12px;
+    }
+
+    .glass-card {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.25);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 14px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+      padding: 30px 20px;
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+      color: #fff;
+      animation: fadeIn 0.45s ease;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 10px;
+      font-size: 15px;
+      border: 1px solid #ddd;
+    }
+
+    button {
+      padding: 12px 20px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      background: #e84b1b;
+      color: #fff;
+      font-size: 16px;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity:0; transform:translateY(10px); }
+      to   { opacity:1; transform:translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="glass-card">
+    <h2>Convocation Seat Finder</h2>
+
+    <input type="text" id="reg" placeholder="Enter Registration Number">
+    <button onclick="findSeat()">Find Seat</button>
+
+    <h3 id="result"></h3>
+  </div>
+
+  <script>
+    function findSeat() {
+      const reg = document.getElementById("reg").value.trim();
+
+      if (reg === "") {
+        document.getElementById("result").innerHTML = "Please enter registration number";
+        return;
+      }
+
+      google.script.run.withSuccessHandler(function(data) {
+        if (data) {
+          document.getElementById("result").innerHTML =
+            "Name: " + data.name + "<br><b>Seat No: " + data.seat + "</b>";
+        } else {
+          document.getElementById("result").innerHTML = "No record found";
+        }
+      }).getSeat(reg);
+    }
+  </script>
+</body>
+</html>
