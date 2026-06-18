@@ -17,6 +17,20 @@ The Convocation Seat Finder provides a simple and efficient platform where stude
 
 The system uses Google Sheets as the data source and Google Apps Script as the backend, eliminating the need for dedicated servers or databases.
 
+## 🖼️ Screenshots
+
+### Seat Finder Interface
+![Seat Finder](seatfinder.png)
+
+### Input Registration Number
+![Input Page](input.png)
+
+### Seat Information Output
+![Output Page](output.png)
+
+### Google Sheet Database
+![Google Sheet](sheet.png)
+
 ## ⚙️ Features
 
 * Instant seat lookup using registration number
