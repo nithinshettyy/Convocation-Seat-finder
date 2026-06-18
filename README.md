@@ -1,59 +1,74 @@
 # 🎓 Convocation Seat Finder
 
-A QR-based student seat allocation system built to simplify crowd management during college convocation ceremonies.
-
----
+A web-based seat lookup system that enables students to quickly find their convocation seating details using their registration number. The system retrieves seat information directly from a live Google Sheet, providing instant access without requiring complex server infrastructure.
 
 ## 📌 Problem Statement
-During convocation events, students often face confusion in finding their allotted seats, leading to crowding and delays.
 
----
+During convocation events, students often face difficulties locating their assigned seats due to large venue layouts and lengthy seating lists. Manual seat verification can cause confusion, delays, and crowding at help desks.
 
 ## 💡 Solution
-This project provides a QR-based web application where:
-- Students scan a QR code
-- Enter their registration number
-- Instantly view their seat number and name
 
----
+The Convocation Seat Finder provides a simple and efficient platform where students can:
 
-## 🛠️ Tech Stack
-- Google Sheets – Data storage
-- Google Apps Script – Backend logic
-- HTML, CSS, JavaScript – Frontend
-- QR Code – Access mechanism
+* Enter their registration number
+* Instantly retrieve seat details
+* Access accurate seating information from a live database
+* Reduce waiting time and confusion during convocation events
 
----
+The system uses Google Sheets as the data source and Google Apps Script as the backend, eliminating the need for dedicated servers or databases.
 
-## ⚙️ System Workflow
-1. Student scans QR code at venue
-2. Web application opens
-3. Student enters registration number
-4. Backend fetches data from Google Sheets
-5. Seat number is displayed instantly
+## ⚙️ Features
 
----
+* Instant seat lookup using registration number
+* Real-time data retrieval from Google Sheets
+* Responsive design for mobile and desktop devices
+* Fast and lightweight architecture
+* User-friendly interface
+* No login required
 
-## ✨ Features
-- Fast and accurate seat lookup
-- Mobile-friendly interface
-- No external database or server required
-- Easy data update via Excel / Google Sheets
+## 🔄 System Workflow
 
----
+1. Student opens the Convocation Seat Finder.
+2. Student enters their registration number.
+3. Request is sent to Google Apps Script.
+4. Google Apps Script fetches data from Google Sheets.
+5. Seat information is returned to the website.
+6. Student instantly views their assigned seat details.
 
-## 🚀 Deployment
-The application is deployed using **Google Apps Script Web App** and accessed via a QR code.
+## 🔐 Services Used
 
----
+* Google Sheets
+* Google Apps Script
+* Web App Deployment
 
-## 🔮 Future Enhancements
-- Department-wise seating
-- Seat block and row visualization
-- Admin authentication
-- Offline fallback system
+## 🚀 Future Enhancements
 
----
+* QR code-based seat lookup
+* Search using student name
+* Venue map integration
+* Downloadable seat pass
+* Email seat confirmation
+* Multi-event support
+
+## 📚 What I Learned
+
+* Google Apps Script Development
+* Google Sheets API Integration
+* Frontend Development using HTML, CSS, and JavaScript
+* Deploying Web Applications without Traditional Servers
+* Data Retrieval and Processing
+* Version Control using Git and GitHub
+
+## 🧩 Challenges Faced
+
+* Connecting frontend requests with Google Apps Script
+* Handling data retrieval efficiently from Google Sheets
+* Designing a simple and responsive user interface
+* Ensuring accurate seat lookup results
+* Managing deployment and access permissions
 
 ## 👨‍💻 Author
-**Nithin Shetty**
+
+**Nithin S Shetty**
+
+GitHub: https://github.com/nithinshettyy
