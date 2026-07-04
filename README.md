@@ -85,4 +85,5 @@ The system uses Google Sheets as the data source and Google Apps Script as the b
 
 **Nithin S Shetty**
 
-GitHub: https://github.com/nithinshettyy
+Email: nithinsshetty3@gmail.com
+GitHub: [https://github.com/nithinsshetty](https://github.com/nithinsshetty)
